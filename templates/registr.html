@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Регистрация
+{% endblock %}
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/fontello.css">
+  <title>Register</title>
+</head>
+<body>
+
+
+ {% block content %}
+
+  <ul class="nav nav-pills sticky-top bg-dark nav-fill">
+    <li class="nav-item">
+      <a class="nav-link" href="index.html">
+        <span style="font-weight: bold;">Главная</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="top-sellers.html"><span style="font-weight: bold;">Топ продавцов</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="advertisement-post.html">
+        <span style="font-weight: bold;">Разместить объявление</span>
+      </a>
+    </li>
+
+
+
+    <li class="nav-item">
+      <a class="nav-link" href="#">
+        <span style="font-weight: bold;">Выйти</span>
+      </a>
+    </li>
+  </ul>
+ <h2>Регистрация</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Отправить</button>
+    </form>
+{% endblock %}

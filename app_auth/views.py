@@ -10,8 +10,10 @@ def login_view(request):
     redirect_url=reverse('profile')
     if request.method=="GET":
         if request.user.is_authenticated:
+            is_authenticated=True
             return redirect(redirect_url)
         else:
+            is_authenticated=False
             return render(request,'app_auth/login.html')
     username=request.POST['username']
     password=request.POST['password']

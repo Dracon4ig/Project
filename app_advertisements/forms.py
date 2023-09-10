@@ -13,3 +13,6 @@ class AdvertisementForm(forms.Form):
     image = forms.ImageField(
         widget=forms.FileInput(attrs={'class': 'form-control form-control-lg'})
     )
+
+
+
