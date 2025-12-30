@@ -7,7 +7,11 @@ from django.contrib.auth.forms import UserCreationForm
 from django.db.models import Count
 import os
 
+<<<<<<< HEAD
 
+=======
+`
+>>>>>>> 2d48121f591964505683a73062fe4f2f6a1a30ea
 
 
 def index(request):
